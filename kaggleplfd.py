@@ -10,5 +10,5 @@ train.iloc[:, 0:3].plot(figsize=(12, 8))#iloc selects row and columns by number.
 plt.axis('off');#turns of the axis
 df=df = pd.read_parquet('../input/train.parquet')
 df.to_csv('../input/training.csv')
-import tensorflow as tf
-fourier=tf.spectral.fft(train.iloc[:,0:3])
+from scipy.fftpack import fft
+
