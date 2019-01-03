@@ -6,3 +6,5 @@ train = pd.read_parquet("../input/train.parquet") #loading the training dataset.
 import matplotlib.pyplot as plt #plotting some patterns.
 train.iloc[:, 0:3].plot(figsize=(12, 8))#iloc selects row and columns by number.figsize plots the figures using matplotlib
 plt.axis('off');#turns of the axis
+import tensorflow as tf
+fourier=tf.spectral.fft(train.iloc[:,0:3])
