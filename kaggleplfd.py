@@ -4,5 +4,5 @@ import os
 print(os.listdir("../input")) #just listing the files that I have
 train = pd.read_parquet("../input/train.parquet") #loading the training dataset.It is in apache parquet format
 import matplotlib.pyplot as plt #plotting some patterns.
-train.iloc[:, 0:3].plot(figsize=(12, 8))
-plt.axis('off');
+train.iloc[:, 0:3].plot(figsize=(12, 8))#iloc selects row and columns by number.figsize plots the figures using matplotlib
+plt.axis('off');#turns of the axis
