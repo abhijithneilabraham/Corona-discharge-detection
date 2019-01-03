@@ -4,7 +4,7 @@ I am trying to do signal processing to find the pattern of occurence of the part
 <html>
   <h1> Points I am trying to remember</h1>
   <body>
-    <h3>1.Try to do FFT and multiply with conjugate of two signals.</h3>
+    <h3>1.Try to do FFT and multiply with conjugate of two signals.This could compare a normal signal with the corrupted signal</h3>
     <h3>2.You could compute the covariance that measures how much a signal is similar to another. For example in Matlab, you can do that with the function cov().</h3>
     <h3>
       find the mathews correlation coefficient</h3>
