@@ -29,6 +29,12 @@ def get_sample():
             5+5*sin(angle1)+10*cos(angle2),
             7+7*sin(angle2) + 14*cos(angle1)
                       ])])
+sliding_window = []
+for i in range(lag-1):
+    sliding_window.append(get_sample())
+
+ 
+    
     
 
 
