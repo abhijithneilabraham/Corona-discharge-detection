@@ -15,16 +15,20 @@ and then try to match it together,by training using lstm.
 '''
 angle1=random()
 angle2=random()
-frequency1=100 #frequency range in range of 50-60 is chosen as standard.
+frequency1=100 #frequency here is set that a period of 2pi is subdivided into several periods
 frequency2=200
 lag=23 #this defines how many steps ahead we are trying to predict
 def get_sample():
-    #this function is gonna return a sin or cos value 
+    #this function is gonna return a sin and  cos value 
     global angle1,angle2
-    angle1+=2*pi/float(frequency1) #sampling the angles in the frequency period in
+    angle1+=2*pi/float(frequency1) #sampling the angles in the frequency period in the 0-2pi range
     angle2+=2*pi/float(frequency2)
-    angle1 %=2*pi
+    angle1 %=2*pi #after sampling the angles,taking the value of angle to be converted to sin and cos waves
     angle2 %=2*pi
+    return array([array([
+            5+5*sin(angle1)+10*cos(angle2),
+            7+7*sin(angle2) + 14*cos(angle1)
+                      ])])
     
 
 
