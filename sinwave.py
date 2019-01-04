@@ -44,7 +44,7 @@ def get_pair():
     input_value=sliding_window[0]
     output_value=sliding_window[-1]
     sliding_window=sliding_window[1:]
-    
+    return input_value,output_value
         
     
     
