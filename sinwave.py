@@ -75,9 +75,12 @@ def get_total_io():
     return array([l1 + l2 + l3]), row_o
 
     
+    '''
+    upto this,the code looks like it computes the derivatives and slopes
+    '''
     
-    
- 
+import tensorflow as tf
+from tensorflow.nn import *
 
    
 
