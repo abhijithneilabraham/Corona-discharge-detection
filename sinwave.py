@@ -29,7 +29,7 @@ def get_sample():
             5+5*sin(angle1)+10*cos(angle2),
             7+7*sin(angle2) + 14*cos(angle1)
                       ])])
-sliding_window = []
+sliding_window = [] #this traverses the entire signal
 for i in range(lag-1):
     sliding_window.append(get_sample())
 
@@ -50,6 +50,13 @@ def get_pair():
 input_dim=2
 last_value=array([0 for i in range (input_dim)]) #array containing 0
 last_derivative=array([0 for i in range (input_dim)])
+
+
+'''
+if the input at time t is x(t), the derivative is x'(t) = (x(t) – x(t-1)). 
+Following the analogy, x”(t) = (x'(t) – x'(t-1)). 
+Here’s the code for that:
+'''
 def get_total_io():
     '''
     Returns the overall Input and Output as required by the model.
@@ -57,6 +64,13 @@ def get_total_io():
     second derivatives
     '''
     global last_value,last_derivative
+    row_i,row_o=get_pair()
+    row_i=row_i[0]
+    l1=list(row_i)
+    derivative=row_i -last_value
+    l2=list(derivative)
+    last_value=row_i
+    
     
     
     
