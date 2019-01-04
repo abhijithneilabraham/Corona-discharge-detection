@@ -33,7 +33,19 @@ sliding_window = []
 for i in range(lag-1):
     sliding_window.append(get_sample())
 
- 
+def get_pair():
+    '''
+    returns a pair,with input and output
+    the output pair will be i steps ahead of the input 
+    pair,as per the frequency
+    '''
+    global sliding_window
+    sliding_window.append(get_sample())
+    input_value=sliding_window[0]
+    output_value=sliding_window[-1]
+    sliding_window=sliding_window[1:]
+    
+        
     
     
 
