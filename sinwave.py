@@ -81,6 +81,19 @@ def get_total_io():
     
 import tensorflow as tf
 from tensorflow.nn import *
+##The Input Layer as a Placeholder
+#Since we will provide data sequentially, the 'batch size'
+#is 1.
+'''
+A placeholder is simply a variable that we will assign data to at a later date. 
+It allows us to create our operations and build our computation graph, 
+without needing the data. In TensorFlow terminology,
+ we then feed data into the graph through these placeholders.
+'''
+input_layer=tf.placeholder(tf.float32,[1,input_dim*3])
+#now ,we are using the lstm (long short term layer)
+lstm_layer1=rnn_cell.BasicLSTMCell(input_dim*3)
+
 
    
 
