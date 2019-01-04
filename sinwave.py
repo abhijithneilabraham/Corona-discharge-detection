@@ -70,7 +70,10 @@ def get_total_io():
     derivative=row_i -last_value
     l2=list(derivative)
     last_value=row_i
-    
+    l3 = list(derivative - last_derivative)
+    last_derivative = derivative
+    return array([l1 + l2 + l3]), row_o
+
     
     
     
