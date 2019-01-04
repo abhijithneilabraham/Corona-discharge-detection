@@ -50,8 +50,15 @@ def get_pair():
 input_dim=2
 last_value=array([0 for i in range (input_dim)]) #array containing 0
 last_derivative=array([0 for i in range (input_dim)])
-def get_total_output():
+def get_total_io():
+    '''
+    Returns the overall Input and Output as required by the model.
+    The input is a concatenation of the wave values, their first and
+    second derivatives
+    '''
     global last_value,last_derivative
+    
+    
     
  
 
