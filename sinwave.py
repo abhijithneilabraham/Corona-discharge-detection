@@ -93,6 +93,9 @@ without needing the data. In TensorFlow terminology,
 input_layer=tf.placeholder(tf.float32,[1,input_dim*3])
 #now ,we are using the lstm (long short term layer)
 lstm_layer1=rnn_cell.BasicLSTMCell(input_dim*3)
+#the lstm state as a variable initialized to zeros
+lstm_state1=tf.Variable(tf.zeros([1,lstm.layer1.state_size]))
+
 
 
    
