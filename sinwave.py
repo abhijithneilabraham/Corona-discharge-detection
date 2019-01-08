@@ -96,6 +96,9 @@ lstm_layer1=rnn_cell.BasicLSTMCell(input_dim*3)
 #the lstm state as a variable initialized to zeros
 lstm_state1=tf.Variable(tf.zeros([1,lstm.layer1.state_size]))
 
+lstm_output1, lstm_state_output1 = lstm_layer1(input_layer, lstm_state1,scope=&quot;LSTM1&quot;)
+#The LSTM state will get updated
+lstm_update_op1 = lstm_state1.assign(lstm_state_output1)
 
 
    
